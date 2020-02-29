@@ -5,8 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
-public class FlagListActivity extends AppCompatActivity {
+public class FlagListActivity extends AppCompatActivity implements FlagOnClickListener {
     private RecyclerView flagsRecyclerView;
 
     @Override
@@ -19,5 +20,10 @@ public class FlagListActivity extends AppCompatActivity {
         flagsRecyclerView = findViewById(R.id.flagsRecyclerView);
         flagsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         flagsRecyclerView.setAdapter(flagAdapter);
+    }
+
+    @Override
+    public void onFlagClick(Flag flag) {
+        Toast.makeText(this, flag.getCountry(), Toast.LENGTH_SHORT).show();
     }
 }
