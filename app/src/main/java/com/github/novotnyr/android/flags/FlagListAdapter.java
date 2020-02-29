@@ -26,7 +26,7 @@ public class FlagListAdapter extends ListAdapter<Flag, FlagViewHolder> {
     @Override
     public FlagViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layout = LayoutInflater.from(parent.getContext())
-                .inflate(android.R.layout.simple_list_item_1,
+                .inflate(android.R.layout.activity_list_item,
                          parent,
                          false);
 
