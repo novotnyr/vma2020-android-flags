@@ -35,6 +35,6 @@ public class FlagListAdapter extends ListAdapter<Flag, FlagViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull FlagViewHolder holder, int position) {
-        holder.bind(getItem(position));
+        holder.bind(getItem(position), flagOnClickListener);
     }
 }
