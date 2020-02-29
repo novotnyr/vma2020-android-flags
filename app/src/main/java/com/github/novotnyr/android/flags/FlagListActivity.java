@@ -14,7 +14,10 @@ public class FlagListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flag_list);
 
+        FlagListAdapter flagAdapter = new FlagListAdapter();
+
         flagsRecyclerView = findViewById(R.id.flagsRecyclerView);
         flagsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        flagsRecyclerView.setAdapter(flagAdapter);
     }
 }
