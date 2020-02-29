@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -24,6 +25,8 @@ public class FlagListActivity extends AppCompatActivity implements FlagOnClickLi
 
     @Override
     public void onFlagClick(Flag flag) {
-        Toast.makeText(this, flag.getCountry(), Toast.LENGTH_SHORT).show();
+        Intent showFlagIntent = new Intent(this, FlagDetailActivity.class);
+        showFlagIntent.putExtra("flag", flag);
+        startActivity(showFlagIntent);
     }
 }
