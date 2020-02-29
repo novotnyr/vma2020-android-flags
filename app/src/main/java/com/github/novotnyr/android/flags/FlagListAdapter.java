@@ -10,8 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ListAdapter;
 
 public class FlagListAdapter extends ListAdapter<Flag, FlagViewHolder> {
-    public FlagListAdapter() {
+    private FlagOnClickListener flagOnClickListener;
+
+    public FlagListAdapter(FlagOnClickListener flagOnClickListener) {
         super(new FlagDiff());
+
+        this.flagOnClickListener = flagOnClickListener;
 
         Flag aut = new Flag("Austria", R.drawable.austria);
         Flag cro = new Flag("Croatia", R.drawable.croatia);

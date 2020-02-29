@@ -15,7 +15,7 @@ public class FlagListActivity extends AppCompatActivity implements FlagOnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flag_list);
 
-        FlagListAdapter flagAdapter = new FlagListAdapter();
+        FlagListAdapter flagAdapter = new FlagListAdapter(this);
 
         flagsRecyclerView = findViewById(R.id.flagsRecyclerView);
         flagsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
